@@ -59,16 +59,4 @@ public class RentService(IRentRepository rentRepository,
 
         if (!isreturned) throw new NotFoundException($"Book not available for {bookRentId}.");
     }
-
-    public async Task SendOverdueEmailAsync(User user, Book book)
-    {
-        var client = new SendGridClient("SENDGRID_API_KEY");
-        var from = new EmailAddress("noreply@bookrental.com", "Book Rental");
-        var to = new EmailAddress(user.Email, user.Name);
-        var subject = "Overdue Book Notification";
-        var plainTextContent = $"Your book '{book.Title}' is overdue.";
-        var htmlContent = $"<strong>Your book '{book.Title}' is overdue.</strong>";
-        var msg = MailHelper.CreateSingleEmail(from, to, subject, plainTextContent, htmlContent);
-        await client.SendEmailAsync(msg);
-    }
 }

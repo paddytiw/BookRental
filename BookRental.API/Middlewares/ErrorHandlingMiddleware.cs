@@ -1,6 +1,8 @@
 ﻿
 using BookRental.Domain.Exceptions;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
+using Microsoft.EntityFrameworkCore;
 
 namespace BookRental.API.Middlewares
 {
@@ -12,7 +14,15 @@ namespace BookRental.API.Middlewares
 			{
 				await next.Invoke(context);
 			}
-			catch (NotFoundException notFound)
+            catch (DbUpdateConcurrencyException concurrencyEx)
+            {
+                var errorMessage = "Another user has already rented this book.";
+                context.Response.StatusCode = 404;
+                await context.Response.WriteAsync(errorMessage);
+
+                logger.LogWarning(concurrencyEx, errorMessage);
+            }
+            catch (NotFoundException notFound)
 			{
                 context.Response.StatusCode = 404;
                 await context.Response.WriteAsync(notFound.Message);

@@ -5,11 +5,15 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRental.API", "BookRental.API\BookRental.API.csproj", "{21E771C7-7C52-4E48-8C3B-410FB69AD31E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRental.Domain", "BookRental.Domain\BookRental.Domain.csproj", "{4EE56980-0CF9-45AA-8B76-DDB979A66C35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRental.Domain", "BookRental.Domain\BookRental.Domain.csproj", "{4EE56980-0CF9-45AA-8B76-DDB979A66C35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRental.Application", "BookRental.Application\BookRental.Application.csproj", "{F4C6AB64-DBD1-41DA-BDCB-3BC3A2651562}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRental.Application", "BookRental.Application\BookRental.Application.csproj", "{F4C6AB64-DBD1-41DA-BDCB-3BC3A2651562}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRental.Infrastructure", "BookRental.Infrastructure\BookRental.Infrastructure.csproj", "{F16C77BC-8E73-438E-81B7-E51DA798CFCB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BookRental.Infrastructure", "BookRental.Infrastructure\BookRental.Infrastructure.csproj", "{F16C77BC-8E73-438E-81B7-E51DA798CFCB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRental.ApplicationTests", "BookRental.ApplicationTests\BookRental.ApplicationTests.csproj", "{072ECBBF-085F-434D-849C-CC550AEE1130}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookRental.APITests", "BookRental.APITests\BookRental.APITests.csproj", "{FADB10DD-D8F5-456E-A985-967B34E2C86E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{F16C77BC-8E73-438E-81B7-E51DA798CFCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F16C77BC-8E73-438E-81B7-E51DA798CFCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F16C77BC-8E73-438E-81B7-E51DA798CFCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{072ECBBF-085F-434D-849C-CC550AEE1130}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{072ECBBF-085F-434D-849C-CC550AEE1130}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{072ECBBF-085F-434D-849C-CC550AEE1130}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{072ECBBF-085F-434D-849C-CC550AEE1130}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FADB10DD-D8F5-456E-A985-967B34E2C86E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FADB10DD-D8F5-456E-A985-967B34E2C86E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FADB10DD-D8F5-456E-A985-967B34E2C86E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FADB10DD-D8F5-456E-A985-967B34E2C86E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
