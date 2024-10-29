@@ -1,0 +1,9 @@
+@BookRental.API_HostAddress = https://localhost:7012
+
+GET {{BookRental.API_HostAddress}}/api/books?genre=Fantasy&name=Hobbit
+
+###
+
+GET {{BookRental.API_HostAddress}}/api/books?name=string
+
+###
